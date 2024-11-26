@@ -1,0 +1,25 @@
+.swiper-button-prev::before,
+.swiper-button-next::before {
+  content: "";
+  @apply bg-white rounded-full size-full;
+}
+.swiper-button-prev::after {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='48' height='48' fill='none'%3E%3Cpath d='m13.398 6.5 7.102 5.498-7.102 5.502V13H3.5v-2h9.898V6.5z' fill='currentColor'/%3E%3C/svg%3E") !important;
+  @apply h-[14px] w-[24px] rotate-[180deg] absolute bg-center bg-[100%_auto] bg-no-repeat;
+}
+.swiper-button-next::after {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='48' height='48' fill='none'%3E%3Cpath d='m13.398 6.5 7.102 5.498-7.102 5.502V13H3.5v-2h9.898V6.5z' fill='currentColor'/%3E%3C/svg%3E") !important;
+  @apply h-[14px] w-[24px] absolute bg-center bg-[100%_auto] bg-no-repeat;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  @apply hidden lg:flex size-[60px];
+}
+.swiper-button-prev {
+  left: 40px;
+}
+.swiper-button-next {
+  right: 40px;
+}

@@ -1,0 +1,280 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 27% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 240 27% 11%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 58 100% 50%;
+    --secondary-foreground: 240 27% 11%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 233 5% 34%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.masonry-container,
+.masonry-container > div {
+  @apply !gap-4 lg:!gap-[30px];
+}
+
+/* React toastify custom style */
+.Toastify {
+  @apply hidden lg:block;
+}
+.Toastify__toast {
+  @apply !p-0 !mb-0;
+}
+.Toastify__toast-body {
+  @apply !p-0;
+}
+/*  */
+
+/* Start | Static effect background */
+.static-background-light::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/assets/images/static-effect-old.png") 0 0;
+  background-repeat: repeat;
+  background-size: 150px 150px;
+  opacity: 0.8;
+}
+.static-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/assets/images/static-effect-old.png") 0 0;
+  background-repeat: repeat;
+  background-size: 150px 150px;
+  opacity: 1;
+}
+.static-background-our-solutions::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/assets/images/static-effect-our-sol.png") 0 0;
+  background-repeat: repeat;
+  background-size: 100px 100px;
+  opacity: 1;
+}
+.static-background-hard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/assets/images/static-effect-dirty-white.jpg") 0 0;
+  background-repeat: repeat;
+  background-size: 100px 100px;
+  opacity: 1;
+}
+.lg-static-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent url("/assets/images/static-effect-old.png") 0 0;
+  opacity: 1;
+}
+@media only screen and (max-width: 1023px) {
+  .lg-static-background::before {
+    display: none;
+  }
+}
+
+.striped-background {
+  width: 100%;
+  background-image: repeating-linear-gradient(
+    to right,
+    transparent 0px,
+    transparent 133px,
+    rgba(36, 36, 52, 0.5) 133px,
+    rgba(36, 36, 52, 0.5) 134px
+  );
+}
+
+@media only screen and (max-width: 1023px) {
+  .striped-background {
+    background-image: repeating-linear-gradient(
+      to right,
+      transparent 0px,
+      transparent 80px,
+      rgba(36, 36, 52, 0.5) 80px,
+      rgba(36, 36, 52, 0.5) 81px
+    );
+  }
+}
+/* End */
+
+/* Start | Beyond text background */
+.boosts-bg::before {
+  content: "";
+  display: inline-block;
+  background-image: url("/assets/images/boosts-bg.webp"); /* Add the image */
+  background-size: cover; /* or contain based on your needs */
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+  width: 110%;
+  height: 106%;
+  left: -5%;
+  top: 3%;
+}
+/* End */
+
+/* Start | React player custom play button */
+.react-player__play-icon::before {
+  content: "";
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-image: url(/assets/images/yt-play-button.png);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-size: 100px 100px;
+  transform: translate(-50%, -50%);
+}
+/* End */
+
+/*  */
+p:empty {
+  height: 18px;
+}
+@media only screen and (max-width: 1023px) {
+  p:empty {
+    height: 24px;
+  }
+}
+/*  */
+
+/* Start | Project modal transition gradient */
+.transition-gradient::before {
+  content: "";
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 4px;
+  height: 34px;
+  background: linear-gradient(white, white, transparent);
+}
+
+@media only screen and (min-width: 1024px) {
+  .transition-gradient::before {
+    height: 64px;
+    display: inline-block;
+  }
+}
+/* End */
+
+/* Start | Custom portable text  */
+
+.article-body h1 {
+  @apply text-3xl lg:text-4xl font-bold lg:px-[58px];
+}
+.article-body h2 {
+  @apply text-2xl lg:text-3xl font-bold lg:px-[58px];
+}
+.article-body h3 {
+  @apply text-xl lg:text-2xl font-bold lg:px-[58px];
+}
+.article-body p {
+  @apply lg:px-[58px];
+}
+
+.article-body ul {
+  list-style-type: disc; /* or circle, square, etc. */
+  @apply ml-4 pl-4 lg:px-[calc(58px+16px)];
+}
+
+.article-body ol {
+  list-style-type: decimal; /* or lower-alpha, upper-roman, etc. */
+
+  @apply ml-4 pl-4 lg:px-[calc(58px+16px)];
+}
+/* End */
+
+/* Start | Hide intercom on mobile */
+@media only screen and (max-width: 1023px) {
+  [class*="intercom"] {
+    /* Add your styles here */
+    display: none !important;
+  }
+}
+/* End */

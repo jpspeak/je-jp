@@ -1,0 +1,101 @@
+{
+  "general": {
+    "viewMore": "VIEW MORE",
+    "noResultsFound": "NO RESULTS FOUND"
+  },
+  "navigation": {
+    "home": "Home",
+    "blog": "Blog",
+    "projects": "Project",
+    "testimonials": "Testimonials",
+    "cta": "Let's Talk"
+  },
+  "reviews": {
+    "customerSatisfaction": "Customer Satisfaction"
+  },
+  "homePage": {
+    "sectionOne": {
+      "cta": "View Project",
+      "chat": "This is the future!"
+    },
+    "sectionTwo": {
+      "title": "Innovating Beyond Boundaries",
+      "description": "JE Designs is a full-service design agency focused on providing high-quality, professional design solutions for businesses and individuals."
+    },
+    "featuredStories": {
+      "title": "Featured Stories",
+      "subtitle": "Experience the same!",
+      "description": "At Jeremy Ellsworth Designs LLC, we are committed to your success.\n We believe that our success lies in your success, and we are dedicated to helping you achieve it."
+    },
+    "sectionThree": {
+      "title": "Case Study Spotlight",
+      "description": "Our designs don't just catch eyes—they capture market share, driving substantial growth for our clients. See how our creative strategies turned these businesses into industry leaders.",
+      "itemOne": {
+        "title": "イコウツアー",
+        "description": "The playful logo design for 'Ikou! Tours' features a friendly mascot character and vibrant colors that catch the eyes of young people. Check out this fun visual branding that heightens the anticipation of travel!"
+      },
+      "itemTwo": {
+        "title": "モンダイナイ",
+        "description": "The playful logo design for 'Ikou! Tours' features a friendly mascot character and vibrant colors that catch the eyes of young people. Check out this fun visual branding that heightens the anticipation of travel!"
+      },
+      "itemThree": {
+        "title": "インスタント弁当",
+        "description": "The innovative logo and packaging design for Instant Bento attract consumer attention with appetite-stimulating bright colors and bold typography. Explore JE Designs' powerful visual branding."
+      },
+      "itemFour": {
+        "title": "マジペイ",
+        "description": "The innovative logo and packaging design for Instant Bento attract consumer attention with appetite-stimulating bright colors and bold typography. Explore JE Designs' powerful visual branding."
+      },
+      "infoTitle": "Let's Get Started!",
+      "infoSubtitle": "Don't wait...",
+      "infoDescription": "Discover how much additional revenue you can earn with the power of professional branding!",
+      "infoCta": "Let's Talk",
+      "infoCtaSub": "Email"
+    },
+    "projects": {
+      "title": "Portfolio Gallery",
+      "subtitle": "Shaping the future with the power of creativity. Unlock new possibilities for your business with our services."
+    },
+    "sectionSix": {
+      "title": "Transforming Ideas into Reality!",
+      "description": "The sketch phase is the first of three steps. Here is where we will come up with a unique concept based on the details we’ve discussed.",
+      "cta": "Let's Talk",
+      "ctaInfo": "100% original designs, everytime!"
+    },
+    "reviews": {
+      "title": "Customer Testimonials",
+      "subtitle": "Industry peers",
+      "description": "At Jeremy Ellsworth Designs LLC, we are committed to your success. We believe that our success lies in your success, and we are dedicated to helping you achieve it.",
+      "info": "Over 1,800 5-star reviews from customers on \n LINE, Facebook, and Google Business Page",
+      "cta": "View more"
+    }
+  },
+  "footer": {
+    "title": "Branding is not just about visuals.",
+    "description": "We fully support your success. We promise unwavering support, bold strategies, and branding that leads to victory!",
+    "ctaOne": "View Project",
+    "ctaTwo": "Let's talk",
+    "links": "Links",
+    "follow": "Follow",
+    "contact": "Contact",
+    "projects": "Projects",
+    "services": "Services",
+    "pricing": "Pricing",
+    "testimonials": "Testimonials",
+    "blog": "Blog",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "twitter": "Twitter/X",
+    "linkedin": "LinkedIn",
+    "youtube": "YouTube",
+    "scheduleACall": "Schedule a call",
+    "contactUs": "Contact us",
+    "contactAddress": "3-17-11 Shibaura,\nMinato City,\nTokyo 108-0023,\nJapan",
+    "info": "Jeremy Ellsworth Designs LLC is a full-service design agency \n catering to businesses and individuals, with a focus on \n delivering high-quality, professional design solutions.",
+    "registered": "Tokyo, Japan - Registered",
+    "copyright": "© 2004-2024 JE Designs LLC \n All Rights Reserved",
+    "faq": "FAQ",
+    "privacyPolicy": "Privacy Policy",
+    "usersAgreement": "Users Agreement"
+  }
+}
