@@ -19,7 +19,7 @@ function BlockA({
     <div>
       <div className="relative flex justify-center">
         <div className="border-[1px] border-muted absolute top-1/2 w-full" />
-        <p className="bg-white text-center px-4 lg:px-8 w-max group-[.lang-ja-family]:font-greycliffjpcd group-[.lang-en-family]:font-portlin group-[.lang-en-weight]:font-regular group-[.lang-ja-weight]:font-extrabold uppercase tracking-[0.5px] text-xl lg:text-[40px] z-[1] ">
+        <p className="bg-white text-center px-4 lg:px-8 w-max group-[.lang-ja-family]:font-greycliffjpcd group-[.lang-en-family]:font-portlin group-[.lang-en-weight]:font-regular group-[.lang-ja-weight]:font-extrabold uppercase tracking-[0.5px] text-[20px] lg:text-[40px] z-[1] ">
           <BreakableText text={title} />
         </p>
       </div>

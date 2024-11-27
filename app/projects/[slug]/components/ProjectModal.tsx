@@ -18,7 +18,7 @@ function ProjectModal({
   dict,
 }: {
   project: Project & {
-    industry: { title: string };
+    industry: { title: string; titleJapanese: string };
     reviews: Review[];
   };
   dict: any;
@@ -65,7 +65,7 @@ function ProjectModal({
                     {industryTitle}
                   </div>
 
-                  <h1 className="text-[40px] lg:text-[80px] leading-[.8] font-portlin uppercase tracking-[0.5px] mt-[24px]">
+                  <h1 className="text-[40px] lg:text-[80px] leading-[.8] group-[.lang-ja-family]:font-greycliffjpcd group-[.lang-en-family]:font-portlin group-[.lang-en-weight]:font-regular group-[.lang-ja-weight]:font-extrabold uppercase tracking-[0.5px] mt-[24px]">
                     {title}
                   </h1>
                   {body && (
@@ -168,7 +168,7 @@ function ProjectModal({
               <div className="mt-[65px] pb-[65px]">
                 <BlockA
                   title={dict.projectPage.blockTitle}
-                  description={dict.projectPage.blockTitle}
+                  description={dict.projectPage.blockDescription}
                   cta={dict.projectPage.blockCta}
                 />
               </div>

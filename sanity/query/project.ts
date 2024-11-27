@@ -53,7 +53,7 @@ export async function getProjects({
 
 export async function getProject({ slug }: { slug: string }): Promise<
   Project & {
-    industry: { title: string };
+    industry: { title: string; titleJapanese: string };
     reviews: (Review & {
       reviewPlatformLogo: any;
       reviewPlatformName: any;
