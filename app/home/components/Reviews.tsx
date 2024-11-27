@@ -85,7 +85,10 @@ function Reviews({
 
   return (
     <>
-      <section className="relative pt-[70px] lg:pt-[140px] pb-[60px] lg:pb-[124px] bg-[#f9f8f3] static-background-hard">
+      <section
+        id="reviews"
+        className="relative pt-[70px] lg:pt-[140px] pb-[60px] lg:pb-[124px] bg-[#f9f8f3] static-background-hard"
+      >
         <div className="absolute w-full h-[27px] lg:h-[37px] -top-[6px] static-background-hard before:z-[1] before:top-[12%] before:h-[86%]">
           <Image
             src="/assets/images/shape-7-copy-12.svg"

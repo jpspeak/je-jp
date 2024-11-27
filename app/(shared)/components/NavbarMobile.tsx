@@ -19,7 +19,7 @@ export default function NavbarMobile({ dict }: { dict: Dictionary }) {
   const [isOpen, setOpen] = useState(false);
   const [{ y }] = useWindowScroll();
   const pathname = usePathname();
-
+  const urlHash = window.location.hash;
   const windowMaxScroll =
     typeof window !== "undefined"
       ? document.body.offsetHeight - window.innerHeight
@@ -49,9 +49,10 @@ export default function NavbarMobile({ dict }: { dict: Dictionary }) {
         >
           <nav className="flex flex-col gap-[1px] bg-[#efefef] overflow-auto">
             {navList.map((navItem, i) => {
-              let isActive = pathname.includes(navItem.url);
+              // let isActive = pathname.includes(navItem.url);
+              let isActive = urlHash ? navItem.url.includes(urlHash) : false;
               if (navItem.url === "/") {
-                isActive = pathname === "/" && navItem.url === "/";
+                isActive = urlHash === "";
               }
               return (
                 <Link

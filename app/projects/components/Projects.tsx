@@ -122,7 +122,7 @@ function Projects({
   };
   return (
     <section
-      id="#projects"
+      id="projects"
       className="relative pt-[26px] pb-[30px] lg:py-[72px]"
     >
       <div className="absolute w-full h-[27px] lg:h-[37px] -top-[6px]">
