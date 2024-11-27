@@ -27,9 +27,10 @@ export default function NavbarMobile({ dict }: { dict: Dictionary }) {
 
   // This will hide navbar when scroll position is at the bottom
   let hideNavbar = (y || 0) >= windowMaxScroll - 100 || (y || 0) < 100;
-  if (typeof window === "undefined") hideNavbar = false;
 
-  if (pathname.includes("/booking/confirmation")) hideNavbar = true;
+  if (typeof window === "undefined") hideNavbar = true;
+
+  // if (pathname.includes("/booking/confirmation")) hideNavbar = true;
 
   const handleNavItemClick = () => {
     setOpen(false);
