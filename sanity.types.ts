@@ -212,8 +212,27 @@ export type Project = {
   _updatedAt: string;
   _rev: string;
   title?: string;
+  titleJapanese?: string;
   slug?: Slug;
   body?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "normal";
+    listItem?: never;
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  }>;
+  bodyJapanese?: Array<{
     children?: Array<{
       marks?: Array<string>;
       text?: string;
@@ -243,6 +262,24 @@ export type Project = {
     _type: "image";
   };
   secondaryBody?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "normal";
+    listItem?: never;
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  }>;
+  secondaryBodyJapanese?: Array<{
     children?: Array<{
       marks?: Array<string>;
       text?: string;
@@ -308,6 +345,7 @@ export type Industry = {
   _updatedAt: string;
   _rev: string;
   title?: string;
+  titleJapanese?: string;
   slug?: Slug;
   description?: string;
 };
