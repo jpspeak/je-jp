@@ -19,7 +19,7 @@ export default function NavbarMobile({ dict }: { dict: Dictionary }) {
   const [isOpen, setOpen] = useState(false);
   const [{ y }] = useWindowScroll();
   const pathname = usePathname();
-  const urlHash = window.location.hash;
+  const urlHash = typeof window !== "undefined" ? window.location.hash : "";
   const windowMaxScroll =
     typeof window !== "undefined"
       ? document.body.offsetHeight - window.innerHeight

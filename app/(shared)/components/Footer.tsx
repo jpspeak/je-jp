@@ -343,11 +343,11 @@ export default function Footer({
           <div className="lg:border-t lg:border-[#252534] lg:mt-[88px]">
             <div className="relative z-[1] container px-4 text-[#666770] text-xs flex flex-col lg:flex-row text-center lg:text-left justify-between py-[40px]">
               <span>{dict.footer.copyright}</span>
-              <span className="mt-4 lg:mt-0">
+              {/* <span className="mt-4 lg:mt-0">
                 <Link href="/">{dict.footer.faq}</Link> •{" "}
                 <Link href="/">{dict.footer.privacyPolicy}</Link> •{" "}
                 <Link href="/">{dict.footer.usersAgreement}</Link>
-              </span>
+              </span> */}
             </div>
           </div>
         </div>
