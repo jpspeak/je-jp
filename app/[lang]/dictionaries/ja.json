@@ -1,7 +1,8 @@
 {
   "general": {
     "viewMore": "もっと見る",
-    "noResultsFound": "見つかりませんでした"
+    "noResultsFound": "見つかりませんでした",
+    "share": "共有"
   },
   "navigation": {
     "home": "ホーム",
@@ -69,6 +70,11 @@
       "info": "全体で 1,800 件を超える 5/5 つ星のレビューが寄せられています\n LINE、Facebook、Googleビジネスページ",
       "cta": "もっと見る"
     }
+  },
+  "projectPage": {
+    "blockTitle": "今すぐ\nあなたのブランドを強化しましょう",
+    "blockDescription": "私たちは典型的な 5 つ星のクリエイティブ デザイン代理店です",
+    "blockCta": "話しましょう"
   },
   "footer": {
     "title": "ブランディングはビジュアルだけではありません",

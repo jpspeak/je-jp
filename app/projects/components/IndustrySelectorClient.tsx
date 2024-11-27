@@ -9,7 +9,7 @@ import {
 } from "@/app/(shared)/components/ui/select";
 import { cn } from "@/app/(shared)/lib/utils";
 import { Industry } from "@/sanity.types";
-import { useSearchParams, usePathname } from "next/navigation";
+import { useSearchParams, usePathname, useParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 
 function IndustrySelectorClient({
@@ -22,6 +22,7 @@ function IndustrySelectorClient({
   const router = useRouter();
   const searchParams = useSearchParams();
   const pathname = usePathname();
+  const { lang } = useParams();
 
   const handleIndustryChange = (industry: string) => {
     const params = new URLSearchParams(searchParams);
@@ -38,7 +39,7 @@ function IndustrySelectorClient({
         aria-label="Open industry options"
         className={cn("w-full lg:w-[282px] text-[#53545c]", className)}
       >
-        <SelectValue placeholder="Industry" />
+        <SelectValue placeholder={lang === "en" ? "Industry" : "業界"} />
       </SelectTrigger>
       <SelectContent
         ref={(ref) =>
@@ -51,17 +52,23 @@ function IndustrySelectorClient({
           value="all"
           className="p-3 text-sm lg:text-lg w-[calc(100vw-40px)] lg:w-auto"
         >
-          All
+          {lang === "en" ? "All" : "全て"}
         </SelectItem>
-        {options.map((projectIndustry) => (
-          <SelectItem
-            key={projectIndustry._id}
-            value={projectIndustry.slug?.current || ""}
-            className="p-3 text-sm lg:text-lg w-[calc(100vw-40px)] lg:w-auto"
-          >
-            {projectIndustry.title}
-          </SelectItem>
-        ))}
+        {options.map((projectIndustry) => {
+          const title =
+            lang === "en"
+              ? projectIndustry.title
+              : projectIndustry.titleJapanese;
+          return (
+            <SelectItem
+              key={projectIndustry._id}
+              value={projectIndustry.slug?.current || ""}
+              className="p-3 text-sm lg:text-lg w-[calc(100vw-40px)] lg:w-auto"
+            >
+              {title}
+            </SelectItem>
+          );
+        })}
       </SelectContent>
     </Select>
   );

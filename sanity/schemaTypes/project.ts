@@ -13,6 +13,12 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: "titleJapanese",
+      title: "Title(Japanese)",
+      type: "string",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: "slug",
       title: "Slug",
       type: "slug",
@@ -43,6 +49,26 @@ export default defineType({
       ],
     }),
     defineField({
+      name: "bodyJapanese",
+      title: "Body(Japanese)",
+      type: "array",
+      of: [
+        {
+          type: "block",
+          styles: [],
+          lists: [],
+          marks: {
+            decorators: [
+              {
+                title: "Bold",
+                value: "strong",
+              },
+            ],
+          },
+        },
+      ],
+    }),
+    defineField({
       name: "mainImage",
       title: "Main Image",
       type: "image",
@@ -54,6 +80,26 @@ export default defineType({
     defineField({
       name: "secondaryBody",
       title: "Secondary Body",
+      type: "array",
+      of: [
+        {
+          type: "block",
+          styles: [],
+          lists: [],
+          marks: {
+            decorators: [
+              {
+                title: "Bold",
+                value: "strong",
+              },
+            ],
+          },
+        },
+      ],
+    }),
+    defineField({
+      name: "secondaryBodyJapanese",
+      title: "Secondary Body(Japanese)",
       type: "array",
       of: [
         {

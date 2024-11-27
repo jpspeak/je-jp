@@ -45,7 +45,7 @@ function Reviews({
     ];
   };
 
-  const REVIEWS_LIMIT = 1;
+  const REVIEWS_LIMIT = 9;
 
   const { data, isLoading, isValidating, size, setSize } = useSWRInfinite(
     getKey,

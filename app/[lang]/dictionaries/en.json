@@ -1,7 +1,8 @@
 {
   "general": {
     "viewMore": "VIEW MORE",
-    "noResultsFound": "NO RESULTS FOUND"
+    "noResultsFound": "NO RESULTS FOUND",
+    "share": "Share"
   },
   "navigation": {
     "home": "Home",
@@ -69,6 +70,11 @@
       "info": "Over 1,800 5-star reviews from customers on \n LINE, Facebook, and Google Business Page",
       "cta": "View more"
     }
+  },
+  "projectPage": {
+    "blockTitle": "ENHANCE YOUR BRAND TODAY",
+    "blockDescription": "We are your quintessential five-star creative design agency",
+    "blockCta": "Let's Talk"
   },
   "footer": {
     "title": "Branding is not just about visuals.",

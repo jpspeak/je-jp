@@ -121,8 +121,10 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
+  project,
 }: Readonly<{
   children: React.ReactNode;
+  project: React.ReactNode;
 }>) {
   const headersList = headers();
   const lang = (headersList.get("x-lang") || "ja") as Locale;
@@ -137,6 +139,7 @@ export default async function RootLayout({
       >
         <DictionaryProvider initialDictionary={dict}>
           {children}
+          {project}
         </DictionaryProvider>
 
         <Toaster

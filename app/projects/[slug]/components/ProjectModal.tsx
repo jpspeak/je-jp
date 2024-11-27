@@ -11,15 +11,27 @@ import ReviewCard from "@/app/(shared)/components/ReviewCard";
 import BlockA from "@/app/(shared)/components/BlockA";
 import ModalCloseButton from "./ModalCloseButton";
 import CalComModal from "@/app/(shared)/components/CalComModal";
+import { useParams } from "next/navigation";
 
 function ProjectModal({
   project,
+  dict,
 }: {
   project: Project & {
     industry: { title: string };
     reviews: Review[];
   };
+  dict: any;
 }) {
+  const { lang } = useParams();
+
+  const industryTitle =
+    lang === "en" ? project.industry.title : project.industry.titleJapanese;
+  const title = lang === "en" ? project.title : project.titleJapanese;
+  const body = lang === "en" ? project.body : project.bodyJapanese;
+  const secondaryBody =
+    lang === "en" ? project.body : project.secondaryBodyJapanese;
+
   const firstReview = project?.reviews?.[0] as Review & {
     reviewPlatformLogo: any;
     reviewPlatformName: string;
@@ -50,16 +62,16 @@ function ProjectModal({
               <div className="lg:max-w-[1122px] mx-auto relative">
                 <div className="px-4 pt-[24px] lg:pt-[46px] lg:px-[calc(117px+58px)]">
                   <div className="text-xs px-[12px] py-[8px] rounded-[5px] border border-foreground w-max font-medium leading-[.8]">
-                    {project.industry.title}
+                    {industryTitle}
                   </div>
 
                   <h1 className="text-[40px] lg:text-[80px] leading-[.8] font-portlin uppercase tracking-[0.5px] mt-[24px]">
-                    {project.title}
+                    {title}
                   </h1>
-                  {project.body && (
+                  {body && (
                     <PortableText
                       className="mt-[30px] text-[15px] leading-[26px] lg:text-lg lg:leading-[30px] text-muted-foreground [&_a]:underline [&_a]:text-blue-500"
-                      content={project.body as any}
+                      content={body as any}
                     />
                   )}
                 </div>
@@ -74,11 +86,11 @@ function ProjectModal({
                         className="rounded-[8px] lg:rounded-[10px]"
                       />
                     </div>
-                    {project.secondaryBody?.length && (
+                    {secondaryBody?.length && (
                       <div className="px-4 lg:px-[54px] mt-[40px] lg:mt-[72px]">
                         <PortableText
                           className="text-[15px] leading-[26px] lg:text-lg lg:leading-[30px] text-muted-foreground [&_a]:underline [&_a]:text-blue-500"
-                          content={project.secondaryBody as any}
+                          content={secondaryBody as any}
                         />
                       </div>
                     )}
@@ -104,10 +116,12 @@ function ProjectModal({
                       <ShareModal
                         pathname={`projects/${project.slug?.current}`}
                       />
-                      <p className="mt-[10px] text-sm font-bold">Share</p>
+                      <p className="mt-[10px] text-sm font-bold">
+                        {dict.general.share}
+                      </p>
                     </div>
 
-                    <div className="flex flex-col items-center">
+                    {/* <div className="flex flex-col items-center">
                       <CalComModal.Trigger>
                         <div className="flex bg-primary items-center justify-center size-[70px] border-[1px] rounded-full border-muted">
                           <Image
@@ -119,7 +133,7 @@ function ProjectModal({
                         </div>
                       </CalComModal.Trigger>
                       <p className="mt-[10px] text-sm font-bold">Quote</p>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -152,7 +166,11 @@ function ProjectModal({
               )}
 
               <div className="mt-[65px] pb-[65px]">
-                <BlockA title="ENHANCE YOUR BRAND TODAY" />
+                <BlockA
+                  title={dict.projectPage.blockTitle}
+                  description={dict.projectPage.blockTitle}
+                  cta={dict.projectPage.blockCta}
+                />
               </div>
             </div>
           </div>

@@ -5,7 +5,7 @@ import { Project } from "@/sanity.types";
 import { getProjects } from "@/sanity/query/project";
 import { Loader } from "lucide-react";
 import { urlForImage } from "@/sanity/lib/image";
-import { usePathname, useSearchParams } from "next/navigation";
+import { useParams, usePathname, useSearchParams } from "next/navigation";
 import { ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -22,6 +22,7 @@ function Projects({
   dict: any;
 }) {
   const pathname = usePathname();
+  const params = useParams();
   const searchParams = useSearchParams();
 
   const industrySlug = searchParams.get("project_industry") || undefined;
@@ -100,16 +101,16 @@ function Projects({
             const src = urlForImage(project.mainImage as any);
             return (
               <Link
-                href={`/projects/${project.slug?.current}`}
+                href={`/${params.lang === "en" ? "en/" : ""}projects/${project.slug?.current}`}
                 key={project._id}
-                className="relative w-full pb-[85.5%] bg-gray-400 rounded-[6px] lg:rounded-[8px] overflow-hidden"
+                className="relative w-full pb-[85.5%] bg-black rounded-[6px] lg:rounded-[8px] overflow-hidden"
               >
                 <Image
                   loader={() => src}
                   src={src}
                   fill
                   alt={project.title || ""}
-                  className="object-contain"
+                  className="object-cover"
                   quality={100}
                 />
               </Link>
