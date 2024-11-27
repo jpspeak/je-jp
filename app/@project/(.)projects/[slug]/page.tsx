@@ -1,7 +1,5 @@
 import React from "react";
-import { getProject, getProjects } from "@/sanity/query/project";
-import { Metadata } from "next";
-import { Project } from "@/sanity.types";
+import { getProject } from "@/sanity/query/project";
 import { blockContentToPlainText } from "react-portable-text";
 import { urlForImage } from "@/sanity/lib/image";
 import { notFound } from "next/navigation";
