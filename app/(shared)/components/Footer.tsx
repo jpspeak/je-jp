@@ -189,11 +189,11 @@ export default function Footer({
             <p className="text-white text-sm lg:text-[18px] mt-4 lg:mt-[60px] max-w-[480px] px-2 lg:px-0">
               {dict.footer.description}
             </p>
-            <div className="flex flex-col xs:flex-row mt-[40px] lg:mt-[54px] gap-4 lg:gap-[26px] px-2 lg:px-0 lg:flex-col xl:flex-row">
-              <Link href={projectLink} className="">
+            <div className="flex flex-col xs:grid xs:grid-cols-2 mt-[40px] lg:mt-[54px] gap-4 lg:gap-[26px] px-2 lg:px-0 lg:flex-col xl:flex xl:flex-row">
+              <Link href={projectLink}>
                 <Button
                   variant="outline"
-                  className="text-white border-white hover:border-transparent lg:px-[28px]"
+                  className="text-white border-white hover:border-transparent lg:px-[28px] w-full xl:w-auto"
                 >
                   {dict.footer.ctaOne}
                 </Button>
@@ -215,7 +215,7 @@ export default function Footer({
           <div className="container px-4 mx-auto relative">
             <div className="grid grid-cols-1 lg:grid-cols-2">
               <div>
-                <div className="relative mx-auto lg:mx-0 ">
+                <div className="relative mx-auto lg:mx-0 w-max">
                   <div className="relative size-[56px] lg:size-[65px] z-[1]">
                     <Image
                       src="/assets/images/je-logo.png"
@@ -227,7 +227,7 @@ export default function Footer({
                   <a
                     href="https://line.me/R/ti/p/@844tbckb"
                     target="_blank"
-                    className="absolute cursor-pointer left-[55px] z-0 -top-[2px] size-[36px] flex items-center justify-center bg-[#06c755] rounded-full"
+                    className="absolute cursor-pointer left-[46px] lg:left-[55px] z-0 -top-[2px] size-[36px] flex items-center justify-center bg-[#06c755] rounded-full"
                   >
                     <Line className="!size-[22px]" />
                   </a>
