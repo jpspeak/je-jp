@@ -115,7 +115,7 @@ function SectionOne({ dict, projectLink }: { dict: any; projectLink: string }) {
       </div>
       <div className="absolute z-[1] bottom-[3.6%] lg:translate-x-1/2 container px-4 lg:h-[602px] w-[180%] lg:w-[1224px] -right-[35%] lg:right-1/2">
         <div className="absolute z-[1] -top-[29%] lg:-top-[25%] lg:right-[52px] w-[30%] lg:w-[28.5%] right-[11.5%]">
-          <div className="absolute lg:right-[56%] right-[46%] -top-[28%] lg:-top-[16%] animate-wiggle w-[74%] lg:w-[54%]">
+          <div className="absolute lg:right-[56%] right-[46%] -top-[28%] lg:-top-[16%] animate-wiggle w-[60%] xs:w-[74%] lg:w-[54%]">
             <Image
               src="/assets/images/homepage-sectionone-chat.png"
               width="185"
