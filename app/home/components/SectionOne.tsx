@@ -91,10 +91,14 @@ function SectionOne({ dict, projectLink }: { dict: any; projectLink: string }) {
           Shaping the future
           <br className="hidden sm:block" /> with boundless creativity.
         </h1>
-        <p className="group-[.lang-ja]:block group-[.lang-en]:hidden mt-4 sm:mt-[30px] text-4 md:text-[22px] max-w-[42vw]">
-          革新的なソリューションでビジネスを加速し、成功への道を切り拓く
+        <p className="group-[.lang-ja]:block group-[.lang-en]:hidden mt-4 sm:mt-[30px] text-[13px] xs:text-sm lg:text-base md:text-[22px] max-w-[42vw]">
+          革新的なソリューションでビ
+          <br className="lg:hidden" />
+          ジネスを加速し、成功への道
+          <br className="lg:hidden" />
+          を切り拓く
         </p>
-        <p className="group-[.lang-ja]:hidden group-[.lang-en]:block mt-4 sm:mt-[30px] text-4 md:text-[22px] max-w-[42vw]">
+        <p className="group-[.lang-ja]:hidden group-[.lang-en]:block mt-4 sm:mt-[30px] text-sm lg:text-base md:text-[22px] max-w-[42vw]">
           <span className="hidden sm:block">
             Accelerating businesses with innovative solutions <br /> and paving
             the way to success.
