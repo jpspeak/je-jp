@@ -6,7 +6,7 @@ import Link from "next/link";
 function SectionOne({ dict, projectLink }: { dict: any; projectLink: string }) {
   return (
     <section className="relative overflow-hidden">
-      <div className="hidden md:block w-full max-w-[1920px] left-1/2 -translate-x-1/2 relative h-[1110px]">
+      {/* <div className="hidden md:block w-full max-w-[1920px] left-1/2 -translate-x-1/2 relative h-[1110px]">
         <Image
           src="/assets/images/homepage-sectionone-bg.webp"
           width="1920"
@@ -41,8 +41,20 @@ function SectionOne({ dict, projectLink }: { dict: any; projectLink: string }) {
             className=" relative"
           />
         </div>
+      </div> */}
+      <div className="mx-auto w-[2560px] relative hidden lg:block">
+        <Image
+          src="/assets/images/homepage-sectionone-bg.webp"
+          width="2560"
+          height="1183"
+          alt="Homepage background"
+          priority
+          quality={100}
+          className="object-cover"
+        />
       </div>
-      <div className="md:hidden h-[770px] ">
+
+      <div className="lg:hidden">
         <Image
           src="/assets/images/homepage-sectionone-bg-mobile.webp"
           width="768"
@@ -67,15 +79,6 @@ function SectionOne({ dict, projectLink }: { dict: any; projectLink: string }) {
               {dict.homePage.sectionOne.chat}
             </p>
           </div>
-          <Image
-            src="/assets/images/homepage-sectionone-man.webp"
-            width="340"
-            height="256"
-            alt="Man"
-            priority
-            quality={100}
-            className=" relative"
-          />
         </div>
       </div>
 
@@ -106,14 +109,39 @@ function SectionOne({ dict, projectLink }: { dict: any; projectLink: string }) {
           </Button>
         </Link>
       </div>
-      <div className="absolute z-[1] bottom-[32px] translate-x-1/2 container px-4 w-[688px] sm:w-full right-[280px] sm:right-1/2">
+      <div className="absolute z-[1] bottom-[3.6%] lg:translate-x-1/2 container px-4 lg:h-[602px] w-[180%] lg:w-[1224px] -right-[35%] lg:right-1/2">
+        <div className="absolute z-[1] -top-[29%] lg:-top-[25%] lg:right-[52px] w-[30%] lg:w-[28.5%] right-[11.5%]">
+          <div className="absolute lg:-left-[8%] -left-[22%] -top-[27%] lg:-top-[16%] animate-wiggle w-[74%] lg:w-[54%]">
+            <Image
+              src="/assets/images/homepage-sectionone-chat.png"
+              width="185"
+              height="100"
+              alt="Chat"
+              priority
+              quality={100}
+              className="w-full"
+            />
+            <p className="-rotate-[15deg] -translate-y-1/2 top-[46%] group-[.lang-ja]:text-[23px] group-[.lang-en]:text-[16px] font-extrabold absolute left-[53%] -translate-x-1/2 whitespace-nowrap">
+              {dict.homePage.sectionOne.chat}
+            </p>
+          </div>
+          <Image
+            src="/assets/images/homepage-sectionone-man.webp"
+            width="340"
+            height="256"
+            alt="Man"
+            priority
+            quality={100}
+            className="w-full relative"
+          />
+        </div>
         <Image
           src="/assets/images/homepage-sectionone-car.webp"
           width="1040"
-          height="603"
+          height="604"
           alt="Car"
           quality={100}
-          className="object-contain relative -left-[30px]"
+          className="object-contain z-[1] relative -left-[30px] w-[87%]"
         />
         <Image
           src="/assets/images/homepage-sectionone-minicar.webp"
@@ -121,7 +149,7 @@ function SectionOne({ dict, projectLink }: { dict: any; projectLink: string }) {
           height="332"
           alt="Mini car"
           quality={100}
-          className="object-contain absolute w-[24%] sm:w-[20.5%] bottom-[1%] sm:bottom-[22px] sm:right-[98px] right-[24%]"
+          className="object-contain z-[1] absolute w-[20.5%] bottom-[2%] lg:bottom-[22px] lg:right-[98px] right-[34%]"
         />
       </div>
       {/* <div className="h-[20px] lg:hidden" /> */}
