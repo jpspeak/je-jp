@@ -18,6 +18,7 @@ import IndustrySelector from "../projects/components/IndustrySelector";
 import { getProjects } from "@/sanity/query/project";
 import { getReviews } from "@/sanity/query/review";
 import Reviews from "../home/components/Reviews";
+import { isEnglishText } from "../(shared)/lib/utils";
 
 export const revalidate = 60;
 
@@ -65,6 +66,9 @@ async function HomePage({
     industrySlug,
   });
   const reviews = await getReviews({ limit: 9 });
+
+  const heroProjectLink = `/en/projects/${(homePageSetting.heroProject as any)?.slug.current}`;
+  const footerProjectLink = `/en/projects/${(homePageSetting.footerProject as any)?.slug.current}`;
   return (
     <>
       <Script
@@ -74,10 +78,7 @@ async function HomePage({
       />
       <Header dict={dict} />
       <main>
-        <SectionOne
-          dict={dict}
-          projectLink={homePageSetting?.projectLinkHeader ?? ""}
-        />
+        <SectionOne dict={dict} buttonLink={heroProjectLink} />
         <div className="relative static-background-hard bg-[#f9f8f3]">
           <SectionTwo dict={dict} />
           <FeaturedStories
@@ -126,10 +127,7 @@ async function HomePage({
         <Reviews dict={dict} initialReviews={reviews} />
       </main>
 
-      <Footer
-        dict={dict}
-        projectLink={homePageSetting?.projectLinkFooter ?? ""}
-      />
+      <Footer dict={dict} buttonLink={footerProjectLink} />
       <div className="hidden lg:block">
         <FakePurchase />
       </div>

@@ -9,13 +9,13 @@ import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { useState } from "react";
 import { useWindowScroll } from "@uidotdev/usehooks";
-import { cn } from "../lib/utils";
+import { cn, isEnglishText } from "../lib/utils";
 import { navList } from "./Header";
 import { usePathname } from "next/navigation";
 import { Dictionary } from "@/app/[lang]/dictionaries";
 import Line from "./svg/Line";
 
-export default function NavbarMobile({ dict }: { dict: Dictionary }) {
+export default function NavbarMobile({ dict }: { dict: any }) {
   const [isOpen, setOpen] = useState(false);
   const [{ y }] = useWindowScroll();
   const pathname = usePathname();
@@ -35,6 +35,7 @@ export default function NavbarMobile({ dict }: { dict: Dictionary }) {
   const handleNavItemClick = () => {
     setOpen(false);
   };
+  const isEn = isEnglishText(dict.navigation.home);
 
   return (
     <div
@@ -61,7 +62,7 @@ export default function NavbarMobile({ dict }: { dict: Dictionary }) {
                   onClick={handleNavItemClick}
                   href={navItem.url}
                   className={cn(
-                    "text-[#adadad] bg-white text-[30px] uppercase tracking-[0.5px] px-6 flex items-center h-[80px]",
+                    "text-[#adadad] bg-white text-[30px] group-[.lang-ja-family]:font-greycliffjpcd group-[.lang-en-family]:font-portlin group-[.lang-en-weight]:font-regular group-[.lang-ja-weight]:font-extrabold uppercase tracking-[0.5px] px-6 flex items-center h-[80px]",
                     isActive && "text-primary"
                   )}
                 >
@@ -92,25 +93,45 @@ export default function NavbarMobile({ dict }: { dict: Dictionary }) {
                 className="object-cover"
               />
               <p className="mt-[10px] text-center text-[17px] font-medium">
-                Your competitors aren&apos;t waiting.
+                {dict.general.navbarMobileTextOne}
               </p>
-              <p className="relative text-center text-[17px] font-bold italic">
-                Neither should you!
-                <Image
-                  src="/assets/images/shape-13-copy-2.svg"
-                  height="8"
-                  width="38"
-                  alt="underline"
-                  className="object-cover absolute right-0 -bottom-[8px]"
-                />
-                <Image
-                  src="/assets/images/arrow-down-white@3x.webp"
-                  height="34"
-                  width="24"
-                  alt="arrow down"
-                  className="object-cover absolute -right-[32px] -bottom-[14px]"
-                />
-              </p>
+              {isEn ? (
+                <p className="relative text-center text-[17px] font-bold italic">
+                  Neither should you!
+                  <Image
+                    src="/assets/images/shape-13-copy-2.svg"
+                    height="8"
+                    width="38"
+                    alt="underline"
+                    className="object-cover absolute right-0 -bottom-[8px]"
+                  />
+                  <Image
+                    src="/assets/images/arrow-down-white@3x.webp"
+                    height="34"
+                    width="24"
+                    alt="arrow down"
+                    className="object-cover absolute -right-[32px] -bottom-[14px]"
+                  />
+                </p>
+              ) : (
+                <p className="relative text-center text-[17px] font-bold italic">
+                  あなたもそうしてはいけません！
+                  {/* <Image
+                    src="/assets/images/shape-13-copy-2.svg"
+                    height="8"
+                    width="38"
+                    alt="underline"
+                    className="object-cover absolute right-0 -bottom-[8px]"
+                  /> */}
+                  <Image
+                    src="/assets/images/arrow-down-white@3x.webp"
+                    height="34"
+                    width="24"
+                    alt="arrow down"
+                    className="object-cover absolute -right-[32px] -bottom-[14px]"
+                  />
+                </p>
+              )}
             </div>
             <div className="absolute w-full h-[8px] -bottom-[6px] z-[1]">
               <Image
@@ -147,7 +168,7 @@ export default function NavbarMobile({ dict }: { dict: Dictionary }) {
               </Button>
             </CalComModal.Trigger> */}
             <Button className="bg-[#07c654] p-1 rounded-lg text-[14px] flex items-center gap-3 px-3">
-              <Line className="size-[29px]" /> 話そう
+              <Line className="!size-[29px]" /> {dict.navigation.ctaMobile}
             </Button>
           </div>
           <div className="px-2">

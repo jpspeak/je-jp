@@ -66,9 +66,7 @@ function Header({ dict }: { dict: Dictionary }) {
           <a href="https://line.me/R/ti/p/@844tbckb" target="_blank">
             <Button className="lg:h-[60px] lg:text-[26px] lg:min-w-[185px] bg-[#07c654] text-white lg:py-[10px] lg:px-[14px] gap-[12px] flex">
               <Line />
-              <span className="group-[.lang-ja-family]:mt-1 group-[.lang-en-family]:mt-0">
-                {dict.navigation.cta}
-              </span>
+              <span>{dict.navigation.cta}</span>
             </Button>
           </a>
         </div>

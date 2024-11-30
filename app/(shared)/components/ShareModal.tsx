@@ -17,7 +17,7 @@ import {
 } from "react-share";
 import { toast } from "sonner";
 
-function ShareModal({ pathname }: { pathname: string }) {
+function ShareModal({ pathname, title }: { pathname: string; title?: string }) {
   const url = `${window.location.origin}/${pathname}`;
   const copy = () => {
     navigator.clipboard.writeText(url);
@@ -40,8 +40,8 @@ function ShareModal({ pathname }: { pathname: string }) {
         overlayClass="bg-transparent"
         hideCloseButton
       >
-        <p className="text-4xl lg:text-[40px] font-portlin uppercase tracking-[0.5px]">
-          SHARE THIS PROJECT
+        <p className="text-4xl lg:text-[38px] group-[.lang-ja-family]:font-greycliffjpcd group-[.lang-en-family]:font-portlin group-[.lang-en-weight]:font-regular group-[.lang-ja-weight]:font-extrabold uppercase tracking-[0.5px]">
+          {title}
         </p>
         <div className="flex mt-[24px] gap-[10px]">
           <FacebookShareButton url={url}>

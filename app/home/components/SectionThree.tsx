@@ -189,9 +189,7 @@ function SectionThree({ dict }: { dict: any }) {
           <a href="https://line.me/R/ti/p/@844tbckb" target="_blank">
             <Button className="lg:text-[28px] lg:min-w-[185px] bg-[#07c654] text-white lg:py-[10px] lg:px-[14px] gap-[12px] flex">
               <Line className="w-[44px] h-[36px] lg:w-[52px] lg:h-[48px]" />
-              <span className="group-[.lang-ja-family]:mt-1 group-[.lang-en-family]:mt-0">
-                {dict.homePage.sectionThree.infoCta}
-              </span>
+              <span>{dict.homePage.sectionThree.infoCta}</span>
             </Button>
           </a>
         </div>

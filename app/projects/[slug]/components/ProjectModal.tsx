@@ -115,6 +115,7 @@ function ProjectModal({
                     <div className="flex flex-col items-center">
                       <ShareModal
                         pathname={`projects/${project.slug?.current}`}
+                        title={dict.general.shareModalTitle}
                       />
                       <p className="mt-[10px] text-sm font-bold">
                         {dict.general.share}

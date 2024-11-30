@@ -2,14 +2,17 @@
   "general": {
     "viewMore": "もっと見る",
     "noResultsFound": "見つかりませんでした",
-    "share": "共有"
+    "share": "共有",
+    "navbarMobileTextOne": "あなたの競合他社は待っていません。",
+    "shareModalTitle": "このプロジェクトを共有してください。"
   },
   "navigation": {
     "home": "ホーム",
     "blog": "ブログ",
     "projects": "プロジェクト",
     "testimonials": "お客様の声",
-    "cta": "話しましょう"
+    "cta": "話しましょう",
+    "ctaMobile": "話そう"
   },
   "reviews": {
     "customerSatisfaction": "顧客からの総フィードバック"

@@ -3,6 +3,8 @@ import StarRating from "./StarRating";
 import numeral from "numeral";
 import { getReviewsCountByRating } from "@/sanity/query/review";
 import { Dictionary } from "@/app/[lang]/dictionaries";
+import Link from "next/link";
+import { isEnglishText } from "../lib/utils";
 
 function HeaderRating({ dict }: { dict: Dictionary }) {
   const { data: reviewRatingCount } = useSWR("getReviewsCountByRating", () =>
@@ -14,8 +16,11 @@ function HeaderRating({ dict }: { dict: Dictionary }) {
     0
   );
   const formattedNumber = numeral(total).format("0.[0]a");
+  const link = isEnglishText(dict.navigation.home)
+    ? "/en#reviews"
+    : "/#reviews";
   return (
-    <div>
+    <Link href={link}>
       <StarRating
         value={5}
         text={
@@ -28,7 +33,7 @@ function HeaderRating({ dict }: { dict: Dictionary }) {
       <p className="text-[9.3px] lg:text-sm mt-[3px] leading-tight font-semibold text-[#0d0c22]">
         {dict.reviews.customerSatisfaction}
       </p>
-    </div>
+    </Link>
   );
 }
 export default HeaderRating;

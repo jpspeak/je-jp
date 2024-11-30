@@ -1,12 +1,18 @@
 import React from "react";
 
-export function BreakableText({ text }: { text: string }) {
+export function BreakableText({
+  text,
+  breakLineClass,
+}: {
+  text: string;
+  breakLineClass?: string;
+}) {
   return (
     <>
       {text.split("\n").map((line, index) => (
         <React.Fragment key={index}>
           {line}
-          <br />
+          <br className={breakLineClass} />
         </React.Fragment>
       ))}
     </>

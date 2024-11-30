@@ -16,10 +16,10 @@ import { BreakableText } from "./BreakableText";
 
 export default function Footer({
   dict,
-  projectLink,
+  buttonLink,
 }: {
   dict: any;
-  projectLink: string;
+  buttonLink: string;
 }) {
   const MainList = () => (
     <ul className="lg:mt-[38px] flex flex-col gap-4 lg:gap-[20px]">
@@ -183,14 +183,14 @@ export default function Footer({
             className="absolute"
           />
           <div className=" self-center">
-            <h2 className="text-[50px] lg:text-[80px] text-white leading-none px-2 lg:px-0 group-[.lang-ja-family]:font-greycliffjpcd group-[.lang-en-family]:font-portlin lg:group-[.lang-en-family]:text-[98px] group-[.lang-ja-weight]:font-extrabold group-[.lang-en-weight]:font-regular">
+            <h2 className="text-[46px] lg:text-[80px] text-white leading-none px-2 lg:px-0 group-[.lang-ja-family]:font-greycliffjpcd group-[.lang-en-family]:font-portlin lg:group-[.lang-en-family]:text-[98px] group-[.lang-ja-weight]:font-extrabold group-[.lang-en-weight]:font-regular">
               {dict.footer.title}
             </h2>
             <p className="text-white text-sm lg:text-[18px] mt-4 lg:mt-[60px] max-w-[480px] px-2 lg:px-0">
               {dict.footer.description}
             </p>
             <div className="flex flex-col xs:grid xs:grid-cols-2 mt-[40px] lg:mt-[54px] gap-4 lg:gap-[26px] px-2 lg:px-0 lg:flex-col xl:flex xl:flex-row">
-              <Link href={projectLink}>
+              <Link href={buttonLink}>
                 <Button
                   variant="outline"
                   className="text-white border-white hover:border-transparent lg:px-[28px] w-full xl:w-auto"
@@ -198,14 +198,16 @@ export default function Footer({
                   {dict.footer.ctaOne}
                 </Button>
               </Link>
-              <a href="https://line.me/R/ti/p/@844tbckb" target="_blank">
+              <a
+                href="https://line.me/R/ti/p/@844tbckb"
+                target="_blank"
+                className="z-[1]"
+              >
                 <Button className="lg:text-[28px] text-primary bg-white w-full xl:w-auto lg:py-[10px] lg:px-[14px] lg:pr-[20px] gap-[20px] flex">
-                  <div className="rounded-full size-[40px] lg:size-[55px] bg-[#06c755] flex items-center justify-center">
+                  <div className="rounded-full shrink-0 size-[40px] lg:size-[55px] bg-[#06c755] flex items-center justify-center">
                     <Line className="w-[26px] h-[24px] lg:w-[36px] lg:h-[34px]" />
                   </div>
-                  <span className="group-[.lang-ja-family]:mt-1 group-[.lang-en-family]:mt-0">
-                    {dict.footer.ctaTwo}
-                  </span>
+                  <span>{dict.footer.ctaTwo}</span>
                 </Button>
               </a>
             </div>
@@ -227,7 +229,7 @@ export default function Footer({
                   <a
                     href="https://line.me/R/ti/p/@844tbckb"
                     target="_blank"
-                    className="absolute cursor-pointer left-[46px] lg:left-[55px] z-0 -top-[2px] size-[36px] flex items-center justify-center bg-[#06c755] rounded-full"
+                    className="absolute cursor-pointer left-[46px] lg:left-[55px] z-[1] -top-[2px] size-[36px] flex items-center justify-center bg-[#06c755] rounded-full"
                   >
                     <Line className="!size-[22px]" />
                   </a>
@@ -288,7 +290,7 @@ export default function Footer({
                   </h2>
                   <SocialList />
                 </div>
-                <div>
+                <div className="pl-[50px]">
                   <h2 className="text-white font-portlin uppercase tracking-[0.5px] text-lg lg:text-[30px] group-[.lang-ja-family]:font-greycliffjpcd group-[.lang-en-family]:font-portlin group-[.lang-ja-weight]:font-extrabold group-[.lang-en-weight]:font-regular">
                     {dict.footer.contact}
                   </h2>

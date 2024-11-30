@@ -74,7 +74,12 @@ export type HomePage = {
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
-  projectLinkHeader?: string;
+  heroProject?: {
+    _ref: string;
+    _type: "reference";
+    _weak?: boolean;
+    [internalGroqTypeReferenceTo]?: "project";
+  };
   featuredStories?: Array<{
     _ref: string;
     _type: "reference";
@@ -120,7 +125,12 @@ export type HomePage = {
     _key: string;
     [internalGroqTypeReferenceTo]?: "review";
   }>;
-  projectLinkFooter?: string;
+  footerProject?: {
+    _ref: string;
+    _type: "reference";
+    _weak?: boolean;
+    [internalGroqTypeReferenceTo]?: "project";
+  };
 };
 
 export type BlockContent = Array<{

@@ -106,7 +106,10 @@ function Reviews({
               {dict.homePage.reviews.title}
             </h1>
             <p className="relative z-[1] text-sm leading-normal lg:text-lg mt-[24px] lg:mt-[40px] mb-[40px] lg:mb-[70px] text-center text-[#53545c]">
-              <BreakableText text={dict.homePage.reviews.description} />
+              <BreakableText
+                breakLineClass="hidden lg:block"
+                text={dict.homePage.reviews.description}
+              />
             </p>
           </div>
           <div>{render()}</div>

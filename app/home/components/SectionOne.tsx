@@ -3,7 +3,7 @@ import { Button } from "@/app/(shared)/components/ui/button";
 import "../style.css";
 import Link from "next/link";
 
-function SectionOne({ dict, projectLink }: { dict: any; projectLink: string }) {
+function SectionOne({ dict, buttonLink }: { dict: any; buttonLink: string }) {
   return (
     <section className="relative overflow-hidden">
       {/* <div className="hidden md:block w-full max-w-[1920px] left-1/2 -translate-x-1/2 relative h-[1110px]">
@@ -107,7 +107,7 @@ function SectionOne({ dict, projectLink }: { dict: any; projectLink: string }) {
             Accelerating growth through innovation.
           </span>
         </p>
-        <Link href={projectLink}>
+        <Link href={buttonLink}>
           <Button className="mt-5 sm:mt-[34px]">
             {dict.homePage.sectionOne.cta}
           </Button>

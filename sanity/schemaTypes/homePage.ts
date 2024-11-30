@@ -6,8 +6,8 @@ export default defineType({
   type: "document",
   groups: [
     {
-      name: "header",
-      title: "Header",
+      name: "hero",
+      title: "Hero",
     },
     {
       name: "featuredStories",
@@ -36,14 +36,11 @@ export default defineType({
   ],
   fields: [
     defineField({
-      name: "projectLinkHeader",
-      title: "Project Link",
-      type: "url",
-      validation: (Rule) =>
-        Rule.uri({
-          scheme: ["http", "https", "mailto", "tel"],
-        }),
-      group: "header",
+      name: "heroProject",
+      title: "Hero Project",
+      type: "reference",
+      to: { type: "project" },
+      group: "hero",
     }),
     defineField({
       name: "featuredStories",
@@ -182,13 +179,10 @@ export default defineType({
       group: "reviews",
     }),
     defineField({
-      name: "projectLinkFooter",
-      title: "Project Link",
-      type: "url",
-      validation: (Rule) =>
-        Rule.uri({
-          scheme: ["http", "https", "mailto", "tel"],
-        }),
+      name: "footerProject",
+      title: "Footer Project",
+      type: "reference",
+      to: { type: "project" },
       group: "footer",
     }),
   ],

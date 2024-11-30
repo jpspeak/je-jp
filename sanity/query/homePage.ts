@@ -6,7 +6,9 @@ import { client } from "../lib/client";
 export async function getHomePageSetting(): Promise<HomePage> {
   let query = `*[_type == "homePage"][0]{
     _id,
-    projectLinkHeader,
+    heroProject->{
+      slug
+    },
     featuredStories[]->{
       ...,
       "reviewPlatformLogo": reviewPlatform->logo,
@@ -28,7 +30,9 @@ export async function getHomePageSetting(): Promise<HomePage> {
       sketchBefore,
       sketchAfter
     },
-    projectLinkFooter
+    footerProject->{
+      slug
+    }
   }`;
   return client.fetch(query);
 }

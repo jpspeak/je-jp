@@ -24,8 +24,10 @@ function StarRating({
     inactiveFillColor: "white",
     activeFillColor: "white",
   };
+
   return (
-    <Link href="reviews" className="flex items-center">
+    // <Link href="#reviews" className="flex items-center">
+    <div className="flex items-center">
       <div className="flex gap-[2.5px] items-center">
         <Rating
           className={cn("max-w-[100px] lg:max-w-[114px]", ratingClass)}
@@ -39,7 +41,8 @@ function StarRating({
         />
       </div>
       {text}
-    </Link>
+    </div>
+    // </Link>
   );
 }
 

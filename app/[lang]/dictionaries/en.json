@@ -2,14 +2,17 @@
   "general": {
     "viewMore": "VIEW MORE",
     "noResultsFound": "NO RESULTS FOUND",
-    "share": "Share"
+    "share": "Share",
+    "navbarMobileTextOne": "Your competitors aren't waiting.",
+    "shareModalTitle": "SHARE THIS PROJECT."
   },
   "navigation": {
     "home": "Home",
     "blog": "Blog",
     "projects": "Project",
     "testimonials": "Testimonials",
-    "cta": "Let's Talk"
+    "cta": "Let's Talk",
+    "ctaMobile": "Let's Talk"
   },
   "reviews": {
     "customerSatisfaction": "Customer Satisfaction"
